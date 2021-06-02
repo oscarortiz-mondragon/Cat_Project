@@ -1,0 +1,108 @@
+.selections {
+  &ButtonContainer {
+    margin: 1rem 1rem;
+    background: linear-gradient(
+      45deg,
+      rgb(206, 158, 109),
+      $secondaryColor,
+      rgb(206, 158, 109),
+      $secondaryColor,
+      rgb(206, 158, 109)
+    );
+  }
+  h2 {
+    background-color: khaki;
+  }
+  background-color: $primaryColor;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  & input {
+    padding: 1rem;
+    color: white;
+    background-color: $secondaryColor;
+    border-radius: 50%;
+    margin: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    &:hover {
+      background-color: $primaryColor;
+      color: orange;
+      @include transition;
+    }
+  }
+  h3 {
+    & span {
+      font-size: 2rem;
+      font-weight: bolder;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      text-align: center;
+    }
+    background-color: red;
+  }
+  &Container {
+    &Item {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+      background: linear-gradient(180deg, red, orange);
+      overflow: hidden;
+    }
+    &ItemList {
+      & div {
+        // this makes the words center to the page and arranges them columns, however to hide them, we must now effect the inidivudal parts in the div, so here we will effect the p elements
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        text-align: center;
+        & p {
+          z-index: 2;
+          opacity: 0;
+          color: black;
+          @include transition;
+        }
+      }
+      position: relative;
+      color: red;
+      list-style: none;
+      border: white solid 5px;
+      &::after {
+        // With all this, nothing really happens until we add the hover
+        content: "";
+        // this won't work if the parent is not set to relative
+        position: absolute;
+        // this pushes it to the bottom
+        top: 100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        opacity: 0;
+        @include transition;
+      }
+      &:hover {
+        &::after {
+          // this pushes the white background back it back to OG place, which should now overlay
+          top: 0;
+          opacity: 0.8;
+        }
+        & p {
+          // this rule makes the p element show again since it was hidden before
+          opacity: 1;
+        }
+      }
+      & img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

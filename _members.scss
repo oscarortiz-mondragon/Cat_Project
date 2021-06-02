@@ -1,0 +1,37 @@
+.membersContainer {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid orange 1rem;
+  h2 {
+    border-bottom: solid purple 10px;
+  }
+  text-align: center;
+  background: linear-gradient(180deg, #973f37, $primaryColor);
+
+  &List {
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2px;
+    border: solid orange 10px;
+    border-radius: 10%;
+
+    &Name {
+      text-align: center;
+      align-items: center;
+      margin-top: 2rem;
+      list-style: none;
+      color: $secondaryColor;
+      margin-bottom: 2.5rem;
+
+      img {
+        display: flex;
+        transform: translate(50%);
+        border-radius: 100%;
+        width: 50%;
+        height: 16rem;
+      }
+    }
+  }
+}

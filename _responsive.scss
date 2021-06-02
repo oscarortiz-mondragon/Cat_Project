@@ -1,0 +1,80 @@
+@include media-md {
+  .navMenu {
+    &List {
+      font-size: 0.7rem;
+    }
+  }
+  // Index Welcome SIGN
+  .home {
+    & h1 {
+      font-size: 1rem;
+    }
+    &Welcome {
+      padding-bottom: 1rem;
+      margin-top: 1rem;
+
+      &R {
+        font-weight: 700;
+      }
+    }
+  }
+  // ABOUT US
+  .aboutUs {
+    font-size: 1rem;
+
+    img {
+      width: 75%;
+      height: 100%;
+      border: olive dashed 0.5rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  //  Section of recent adoptions
+  .membersContainer {
+    &List {
+      &Name {
+        img {
+          transform: translate(0%);
+          width: 90%;
+          height: 10rem;
+        }
+      }
+    }
+  }
+  // Area where you can see adoptions
+  .selections {
+    & input {
+      &:hover {
+        transition: none;
+      }
+    }
+    // Please Read Warning Adoption Area
+    h3 {
+      & span {
+        font-size: 1.5rem;
+      }
+      background-color: red;
+    }
+    &Container {
+      &Item {
+        grid-gap: 1rem;
+        background: linear-gradient(180deg, red, orange);
+        grid-template-columns: repeat(1, 1fr);
+        overflow: hidden;
+      }
+      &ItemList {
+        & div {
+          overflow: scroll;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,426 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.membersContainer {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid orange 1rem;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#973f37), to(#4d243d));
+  background: linear-gradient(180deg, #973f37, #4d243d);
+}
+
+.membersContainer h2 {
+  border-bottom: solid purple 10px;
+}
+
+.membersContainerList {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2px;
+  border: solid orange 10px;
+  border-radius: 10%;
+}
+
+.membersContainerListName {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  list-style: none;
+  color: #ff652f;
+  margin-bottom: 2.5rem;
+}
+
+.membersContainerListName img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+  border-radius: 100%;
+  width: 50%;
+  height: 16rem;
+}
+
+.aboutUs {
+  background-color: peru;
+  margin-top: 1rem;
+  text-align: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-bottom: 1rem;
+  border: solid #4d243d 1rem;
+  font-size: 1rem;
+}
+
+.aboutUs img {
+  width: 50%;
+  height: 100%;
+  border: olive dashed 1rem;
+}
+
+.aboutUs h2 {
+  border-bottom: solid black 5px;
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  color: orange;
+  text-shadow: pink 0.1rem 0.1rem;
+}
+
+.aboutUs p {
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: underline;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.selections {
+  background-color: #4d243d;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 2rem;
+}
+
+.selectionsButtonContainer {
+  margin: 1rem 1rem;
+  background: linear-gradient(45deg, #ce9e6d, #ff652f, #ce9e6d, #ff652f, #ce9e6d);
+}
+
+.selections h2 {
+  background-color: khaki;
+}
+
+.selections input {
+  padding: 1rem;
+  color: white;
+  background-color: #ff652f;
+  border-radius: 50%;
+  margin: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.selections input:hover {
+  background-color: #4d243d;
+  color: orange;
+  -webkit-transition: ease-in-out 0.3s all;
+  transition: ease-in-out 0.3s all;
+}
+
+.selections h3 {
+  background-color: red;
+}
+
+.selections h3 span {
+  font-size: 2rem;
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: center;
+}
+
+.selectionsContainerItem {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(red), to(orange));
+  background: linear-gradient(180deg, red, orange);
+  overflow: hidden;
+}
+
+.selectionsContainerItemList {
+  position: relative;
+  color: red;
+  list-style: none;
+  border: white solid 5px;
+}
+
+.selectionsContainerItemList div {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.selectionsContainerItemList div p {
+  z-index: 2;
+  opacity: 0;
+  color: black;
+  -webkit-transition: ease-in-out 0.3s all;
+  transition: ease-in-out 0.3s all;
+}
+
+.selectionsContainerItemList::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  opacity: 0;
+  -webkit-transition: ease-in-out 0.3s all;
+  transition: ease-in-out 0.3s all;
+}
+
+.selectionsContainerItemList:hover::after {
+  top: 0;
+  opacity: 0.8;
+}
+
+.selectionsContainerItemList:hover p {
+  opacity: 1;
+}
+
+.selectionsContainerItemList img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 780px) {
+  .navMenuList {
+    font-size: 0.7rem;
+  }
+  .home h1 {
+    font-size: 1rem;
+  }
+  .homeWelcome {
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .homeWelcomeR {
+    font-weight: 700;
+  }
+  .aboutUs {
+    font-size: 1rem;
+  }
+  .aboutUs img {
+    width: 75%;
+    height: 100%;
+    border: olive dashed 0.5rem;
+  }
+  .aboutUs h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  .aboutUs p {
+    font-size: 1rem;
+  }
+  .membersContainerListName img {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+    width: 90%;
+    height: 10rem;
+  }
+  .selections input:hover {
+    -webkit-transition: none;
+    transition: none;
+  }
+  .selections h3 {
+    background-color: red;
+  }
+  .selections h3 span {
+    font-size: 1.5rem;
+  }
+  .selectionsContainerItem {
+    grid-gap: 1rem;
+    background: -webkit-gradient(linear, left top, left bottom, from(red), to(orange));
+    background: linear-gradient(180deg, red, orange);
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    overflow: hidden;
+  }
+  .selectionsContainerItemList div {
+    overflow: scroll;
+    font-size: 1rem;
+  }
+}
+
+h2 span {
+  color: #ff652f;
+}
+
+nav h1 {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+nav h1:hover {
+  color: red;
+  -webkit-transition: ease-in-out 0.3s all;
+  transition: ease-in-out 0.3s all;
+  cursor: pointer;
+}
+
+.navMenu {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  border-top: solid orange 1px;
+}
+
+.navMenu.open {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: ease-in-out 0.3s all;
+  transition: ease-in-out 0.3s all;
+}
+
+.navMenu.close {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  -webkit-transition: ease-in-out 0.3s all;
+  transition: ease-in-out 0.3s all;
+}
+
+.navMenuList {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navMenu a {
+  margin-left: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.navMenu a:hover {
+  -webkit-transition: ease-in-out 0.3s all;
+  transition: ease-in-out 0.3s all;
+  color: orange;
+}
+
+main {
+  background: -webkit-gradient(linear, left top, left bottom, from(#4d243d), to(#ff652f)) no-repeat center/cover;
+  background: linear-gradient(180deg, #4d243d, #ff652f) no-repeat center/cover;
+}
+
+.home {
+  background: linear-gradient(45deg, rgba(11, 11, 11, 0.2), rgba(247, 248, 248, 0.959)), url("./images/cat.jpg") center/cover no-repeat;
+  height: 100%;
+  padding-top: 35vh;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 2rem;
+}
+
+.homeWelcome {
+  font-size: 5rem;
+  padding-bottom: 5rem;
+  margin-top: 1rem;
+}
+
+.homeWelcomeR {
+  font-weight: 700;
+}
+
+footer {
+  font-size: 1rem;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: setTextColor(#4d243d);
+}
+
+.socialIcons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 1;
+}
+
+.socialIcons a {
+  padding: 0.4rem;
+  color: cornflowerblue;
+  -webkit-transition: ease-in-out 0.3s all;
+  transition: ease-in-out 0.3s all;
+}
+
+.socialIcons a:hover {
+  color: red;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+body {
+  color: setTextColor(#4d243d);
+  background-color: orange;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+/*# sourceMappingURL=main.css.map */
