@@ -1,0 +1,131 @@
+@import "config";
+@import "members";
+@import "about";
+@import "selections";
+@import "responsive";
+h2 span {
+  color: $secondaryColor;
+}
+nav h1 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  &:hover {
+    color: red;
+    @include transition;
+    cursor: pointer;
+  }
+}
+.navMenu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  transform: translateY(-100px);
+  border-top: solid orange 1px;
+  &.open {
+    transform: translateY(0px);
+    @include transition;
+  }
+  &.close {
+    transform: translateY(-100px);
+    @include transition;
+  }
+
+  &List {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+  }
+  & a {
+    margin-left: 1.5em;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    &:hover {
+      @include transition;
+      color: orange;
+    }
+  }
+}
+main {
+  background: linear-gradient(180deg, $primaryColor, $secondaryColor) no-repeat
+    center/cover;
+}
+.home {
+  background: linear-gradient(
+      45deg,
+      rgba(11, 11, 11, 0.2),
+      rgba(247, 248, 248, 0.959)
+    ),
+    url("./images/cat.jpg") center/cover no-repeat;
+  height: 100%;
+  padding-top: 35vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  & h1 {
+    font-size: 2rem;
+  }
+  &Welcome {
+    font-size: 5rem;
+    padding-bottom: 5rem;
+    margin-top: 1rem;
+
+    &R {
+      font-weight: 700;
+    }
+  }
+}
+
+footer {
+  font-size: 1rem;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: setTextColor($primaryColor);
+}
+.socialIcons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 1;
+
+  a {
+    // transion ease allows us when hovering over the social icons, for them not to suddenly pop in and out, this is done with a mixin created in _config.scss
+
+    padding: 0.4rem;
+    color: cornflowerblue;
+    @include transition;
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  // position fixed allows us to have the bar always seen and on top of everything
+
+  z-index: 2;
+  width: 100%;
+  // based on font size of body, so sice it's 16, one rem is 16px
+  padding: 1rem;
+}
+body {
+  color: setTextColor($primaryColor);
+  background-color: orange;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}

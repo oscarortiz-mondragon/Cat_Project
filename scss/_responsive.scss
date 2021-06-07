@@ -18,6 +18,7 @@
       }
     }
   }
+
   // ABOUT US
   .aboutUs {
     font-size: 1rem;
@@ -51,6 +52,11 @@
   // Area where you can see adoptions
   .selections {
     & input {
+      padding: 0.3rem;
+
+      margin: 1rem;
+      font-size: 0.8rem;
+      cursor: pointer;
       &:hover {
         transition: none;
       }
@@ -66,13 +72,13 @@
       &Item {
         grid-gap: 1rem;
         background: linear-gradient(180deg, red, orange);
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         overflow: hidden;
       }
       &ItemList {
         & div {
           overflow: scroll;
-          font-size: 1rem;
+          font-size: 0.7rem;
         }
       }
     }
